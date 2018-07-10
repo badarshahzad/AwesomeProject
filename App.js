@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 class Greeting extends Component {
   render() {
     return (
-        <Text> Hello! {this.props.name} !</Text>
+      <Text> Hello! {this.props.name} !</Text>
     );
   }
 }
@@ -57,37 +57,41 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
 
-        {/* Example of picture */}
-        <View >
-          <Image source={pic} style={{ width: 193, height: 110 }} />
+
+
+
+        <View style={{ flex: 1, backgroundColor: 'powderblue' }} >
+          {/* Example of picture */}
+          <View >
+            <Image source={pic} style={{ width: 193, height: 110 }} />
+          </View>
+
+          <Text>Hey! Look at this pic, here are Bananas!</Text>
+
+          {/* Example of praps to add different names */}
+          <Greeting name="Badar" />
+          <Greeting name="Shahzad" />
+          <Greeting name="Khan" />
+
         </View>
 
-        <Text>Hey! Look at this pic, here are Bananas!</Text>
+        <View style={{ flex: 2, backgroundColor: 'skyblue' }} >
+          {/* Add couple of fruit pictures */}
+          <FruitPictures pics={object} />
+          {/* Blinking text dumi data */}
+          <Blink text="1" />
+          <Blink text="2" />
+          <Blink text="3" />
+          <Blink text="4" />
+          <Blink text="5" />
+          <Blink text="0" />
+        </View>
 
-        {/* Example of praps to add different names */}
-        <Greeting name="Badar" />
-
-        <Greeting name="Shahzad" />
-
-        <Greeting name="Khan" />
-
-        {/* Add couple of fruit pictures */}
-
-        <FruitPictures pics={object} />
-        {/* Blinking text dumi data */}
-        <Blink text="1" />
-        <Blink text="2" />
-        <Blink text="3" />
-        <Blink text="4" />
-        <Blink text="5" />
-        <Blink text="0" />
-
-        <View style={styles.header}> </View>
-
-        <View style={styles.content}> </View>
-
-        <View style={styles.bottom}> </View>
       </View>
+
+
+
+
 
     );
   }
@@ -100,21 +104,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+
   },
   red: {
     color: 'red',
-  },
-
-  header: {
-    flex: 1,
-    backgroundColor: 'powderblue',
-  },
-  content: {
-    flex: 2,
-    backgroundColor: 'skyblue'
-  },
-  bottom: {
-    flex: 3,
-    backgroundColor: 'steelblue'
   },
 });
