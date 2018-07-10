@@ -58,9 +58,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
 
-
-
-        <View style={{ flex: 1, backgroundColor: 'powderblue' }} >
+        <View style={{ flex: 2, backgroundColor: 'powderblue' }} >
           {/* Example of picture */}
           <View >
             <Image source={pic} style={{ width: 193, height: 110 }} />
@@ -75,7 +73,7 @@ export default class App extends React.Component {
 
         </View>
 
-        <View style={{ flex: 2, backgroundColor: 'skyblue' }} >
+        <View style={{ flex: 3, backgroundColor: 'skyblue' }} >
           {/* Add couple of fruit pictures */}
           <FruitPictures pics={object} />
           {/* Blinking text dumi data */}
@@ -88,10 +86,6 @@ export default class App extends React.Component {
         </View>
 
       </View>
-
-
-
-
 
     );
   }
