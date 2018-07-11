@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
+import AppNavigator from './app/app.navigator';
+
 export default class App extends React.Component {
   render() {
 
@@ -13,13 +15,8 @@ export default class App extends React.Component {
     }
 
     return (
-      <View style={styles.container}>
-      <Text>Kaka</Text>
-        <View style={styles.header} />
-        <View style={styles.content} />
-        <View style={styles.bottom} />
-      </View>
 
+      <AppNavigator/>
     );
   }
 }
@@ -34,8 +31,10 @@ const styles = StyleSheet.create({
   },
   header: { backgroundColor: 'powderblue',  width:50,
   height:50,},
+
   content: { backgroundColor: 'skyblue',  width:50,
   height:50,},
+
   bottom: { backgroundColor: 'steelblue',  width:50,
   height:50,},
  
